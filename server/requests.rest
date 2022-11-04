@@ -1,0 +1,15 @@
+GET http://localhost:3001/checklists
+
+###
+
+
+POST http://localhost:3001/checklist/new
+Content-Type: application/json
+
+{
+    "text":"Another request"
+}
+
+###
+
+DELETE http://localhost:3001/checklist/delete/63658677d25472842e3ef60d
