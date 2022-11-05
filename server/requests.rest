@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3001/checklist/delete/636586c5d25472842e3ef610
+DELETE http://localhost:3001/checklist/delete/6365a4c07b7a5bd3ed2b9fcc
 
 
 ###
