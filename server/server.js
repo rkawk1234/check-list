@@ -35,15 +35,15 @@ app.post('/checklist/new', (req,res)=> {
 app.delete('/checklist/delete/:id', async (req,res) => {
     const result = await Checklist.findByIdAndDelete(req.params.id);
 
-    res.json(result);
-})
+    res.json({result});
+});
 
-app.put('/checklist/complete/:id', async(req,res)=>{
+app.get('/checklist/complete/:id', async(req,res)=>{
     const checklist = await Checklist.findById(req.params.id);
     checklist.complete = !checklist.complete;
     checklist.save();
     res.json(checklist);
-})
+});
 
 app.listen(3001, ()=> console.log("Server started on port 3001"));
 
