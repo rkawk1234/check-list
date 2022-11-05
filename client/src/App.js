@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Check-list App</h1>
+      <h1>Check-list App by Min Kim</h1>
       <h4> Your Tasks</h4>
       <div className="checklists">
         {lists.length > 0 ? lists.map(checklist => (
