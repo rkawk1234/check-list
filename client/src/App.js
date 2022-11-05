@@ -12,8 +12,9 @@ function App() {
 
   useEffect(() => {
     getLists();
+    
 
-  })
+  },[])
 
   const getLists = () => {
     fetch(API_URL + "/checklists")
@@ -37,10 +38,10 @@ function App() {
     }));
   }
 
+
+
   const deleteChecklist = async id => {
-    const data = await fetch(API_URL + "/checklist/delete/" + id, {
-      method: "DELETE"
-    }).then(response => response.json());
+    const data = await fetch(API_URL + "/checklist/delete/" + id, { method: "DELETE" }).then(response => response.json());
 
     setLists(lists => lists.filter(checklist => checklist._id !== data.result._id));
 

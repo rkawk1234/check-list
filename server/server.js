@@ -34,7 +34,7 @@ app.post('/checklist/new', (req,res)=> {
 
 app.delete('/checklist/delete/:id', async (req,res) => {
     const result = await Checklist.findByIdAndDelete(req.params.id);
-
+    console.log(result);
     res.json({result});
 });
 
